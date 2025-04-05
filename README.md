@@ -4,13 +4,35 @@ Calculate word counts in a text file!
 
 ## Installation
 
+Clone the repository and install using [Poetry](https://python-poetry.org/):
+
 ```bash
-$ pip install pycounts
+git clone https://github.com/charlotter1277/pycounts.git
+cd pycounts
+poetry install
 ```
 
 ## Usage
+1. Activate the Poetry shell:
+```
+poetry shell
+```
+2. Create a sample text file (e.g., using the Zen of Python):
+```
+python -c "import this" > zen.txt
+```
+3. Run pycounts in Python:
+```
+from pycounts.pycounts import count_words
 
-- TODO
+counts = count_words("zen.txt")
+print(counts) 
+```
+## Usage
+Tests are written using pytest. To run them:
+```
+poetry run pytest
+```
 
 ## Contributing
 
